@@ -1,4 +1,4 @@
 common-code
 ===========
 
-Private javascript code
+This is Private javascript code for myself
