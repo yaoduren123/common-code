@@ -19,6 +19,7 @@ Array.method('insertSort', function() {
     return this;
 });
 
+//先在有序区通过二分查找的方法找到移动元素的起始位置，然后通过这个起始位置将后面所有的元素后移。
 Array.method('bInsertSort', function() {
     var len = this.length,
         i, j, tmp, low, high, mid;
