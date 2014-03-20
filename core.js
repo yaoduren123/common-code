@@ -18,3 +18,23 @@ Array.method('insertSort', function() {
     }
     return this;
 });
+
+Array.method('bInsertSort', function() {
+    var len = this.length,
+        i, j, tmp, low, high, mid;
+    for (i = 1; i < len; i++) {
+        tmp = this[i];
+        low = 0;
+        high = i - 1;
+        while (low <= high) {
+            mid = (low + high) / 2;
+            if (tmp < this[mid]) high = mid - 1;
+            else low = mid + 1;
+        }
+        for (j = i - 1; j >= high + 1; j--) {
+            this[j + 1] = this[j];
+        }
+        this[j + 1] = tmp;
+    }
+    return this;
+});
